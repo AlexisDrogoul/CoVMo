@@ -33,7 +33,7 @@ global {
 	bool show_traffic <- true;
 	bool show_ranking <- true;
 	int nb_ranking_list <- 10;
-	file a_file <- folder("../../results/");
+	file a_file <- folder("../results/");
 	bool a_boolean_to_disable_parameters <- true;
 //	float weight_risk_F0 <- 5.0;
 	float weight_risk_personality <- 2.0;

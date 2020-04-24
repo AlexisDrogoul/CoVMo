@@ -12,7 +12,7 @@ import "../species/AdministrativeBound.gaml"
 
 global {
 	action init_transportation {
-		string fpath <- "../../data/VNM_transportation.csv";
+		string fpath <- "../data/VNM_transportation.csv";
 		if (!file_exists(fpath)) {
 			return;
 		}

@@ -14,7 +14,7 @@ import "../species/AdministrativeBound.gaml"
 global {
 
 	action retrieve_cases {
-		string fpath <- "../../data/VNM_1_statistic.csv";
+		string fpath <- "../data/VNM_1_statistic.csv";
 		if (!file_exists(fpath)) {
 			return;
 		}

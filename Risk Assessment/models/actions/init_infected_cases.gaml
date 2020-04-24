@@ -13,7 +13,7 @@ import "../species/AdministrativeBound.gaml"
 global {
 
 	action init_infected_cases {
-		string fpath <- "../../data/VNM_1.csv";
+		string fpath <- "../data/VNM_1.csv";
 		if (!file_exists(fpath)) {
 			return;
 		}

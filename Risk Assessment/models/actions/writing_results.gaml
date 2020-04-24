@@ -20,7 +20,7 @@ global {
 			res <- res + current_name + "," + risk_point + "," + F1 + "\n";
 		}
 
-		write res;
+//		write res;
 		save data: res to: a_file.path + "/" + filename type: "csv" header: false rewrite: true;
 	}
 

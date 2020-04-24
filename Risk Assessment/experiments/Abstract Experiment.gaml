@@ -6,7 +6,7 @@
 ***/
 model Corona
 
-import "../Global.gaml"
+import "../models/Global.gaml"
 
 global {
 	font default <- font("Helvetica", 20, #bold);

@@ -13,7 +13,7 @@ import "../species/AdministrativeBound.gaml"
 global {
 
 	action retrieve_risk_point {
-		string fpath <- "../../data/riskpoint/risk_" + current_date.day + "_" + current_date.month + ".csv";
+		string fpath <- "../data/riskpoint/risk_" + current_date.day + "_" + current_date.month + ".csv";
 		if (!file_exists(fpath)) {
 			return;
 		}
