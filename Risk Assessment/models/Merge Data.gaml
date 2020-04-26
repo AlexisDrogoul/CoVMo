@@ -14,10 +14,20 @@ global {
 	shape_file provinces_shp_file3 <- shape_file("../includes/gadm36_VNM_shp/gadm36_VNM_3.shp");
 	shape_file provinces_shp_file4 <- shape_file("../data/HanhChinh_All/ProvinceIsLands_WGS84.shp");
 	//	shape_file provinces_shp_file <- shape_file("../includes/gadm36_VNM_shp/gadm36_VNM.shp");
-		geometry shape <- envelope(provinces_shp_file1);
-	
+	geometry shape <- envelope(provinces_shp_file1);
+
 	init {
-		do convertprojdata;
+		do split;
+	}
+
+	action split {
+		shape_file longlbienshp <- shape_file("../includes/gadm36_VNM_shp/generated/VNM.27.16_1.shp");
+		create adm3 from: longlbienshp;
+		ask adm3 {
+			save [self] to: "../includes/gadm36_VNM_shp/generated/VNM.27.16_1/"+VARNAME_3+"/boundary.shp" type: "shp" attributes:
+			["ID"::int(self), "NAME_1"::NAME_1, "GID_1"::GID_1, "NAME_2"::NAME_2, "GID_2"::GID_2, "NAME_3"::NAME_3, "GID_3"::GID_3, "VARNAME_1"::VARNAME_1, "VARNAME_2"::VARNAME_2, "VARNAME_3"::VARNAME_3];
+		}
+
 	}
 
 	action generate_demograph {
